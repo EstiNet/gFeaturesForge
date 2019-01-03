@@ -18,7 +18,7 @@ import java.nio.file.Files;
 import java.util.*;
 
 public class ClioteSky {
-    public static boolean enabled, checkTLS;
+    public static boolean checkTLS;
 
     private static String name, password, address, port, category;
 
@@ -42,12 +42,10 @@ public class ClioteSky {
         gFeatures.getLogger().info("Starting ClioteSky...");
 
         loadConfig();
-        if (enabled) {
-            clioteSky = new ClioteSky(address, Integer.parseInt(port));
-            clioteSky.start();
-            clioteSky.startEventLoop();
-            gFeatures.getLogger().info("[ClioteSky] enabled!");
-        }
+        clioteSky = new ClioteSky(address, Integer.parseInt(port));
+        clioteSky.start();
+        clioteSky.startEventLoop();
+        gFeatures.getLogger().info("[ClioteSky] enabled!");
     }
 
     private static void loadConfig() {
@@ -56,18 +54,17 @@ public class ClioteSky {
 
         try {
 
-            input = new FileInputStream("plugins/gFeatures/Config.yml");
+            input = new FileInputStream("config/gFeatures.yml");
 
             // load a properties file
             prop.load(input);
 
             // get the property value and print it out
-            ClioteSky.name = prop.getProperty("ClioteSky.Name");
-            ClioteSky.category = prop.getProperty("ClioteSky.Category");
-            ClioteSky.address = prop.getProperty("ClioteSky.Address");
-            ClioteSky.enabled = Boolean.parseBoolean(prop.getProperty("ClioteSky.Enable"));
-            ClioteSky.port = prop.getProperty("ClioteSky.Port");
-            ClioteSky.checkTLS = Boolean.parseBoolean(prop.getProperty("ClioteSky.CheckTLS"));
+            ClioteSky.name = gFeatures.gFeaturesConfig.clioteSkyName;
+            ClioteSky.category = gFeatures.gFeaturesConfig.clioteSkyCategory;
+            ClioteSky.address = gFeatures.gFeaturesConfig.clioteSkyAddress;
+            ClioteSky.port = gFeatures.gFeaturesConfig.clioteSkyPort;
+            ClioteSky.checkTLS = gFeatures.gFeaturesConfig.clioteSkyCheckTLS;
 
             File f = new File("plugins/gFeatures/masterkey.key"); //get master key password
             if (f.exists()) {
@@ -202,7 +199,7 @@ public class ClioteSky {
 
                         for (ClioteHook hook : clioteHookList) {
                             //check if cliotehook has matching identifier, and call
-                            if (hook.identifier.equals(m.getIdentifier()) /*&& gFeatures.getFeature(hook.gFeatureName).isEnabled() */ ) {
+                            if (hook.identifier.equals(m.getIdentifier()) /*&& gFeatures.getFeature(hook.gFeatureName).isEnabled() */) {
                                 new Thread(() -> hook.run(m.getData().toByteArray(), m.getSender())).run();
                             }
                         }
@@ -240,7 +237,7 @@ public class ClioteSky {
                 }
 
                 try {
-                    if(slowCheck) {
+                    if (slowCheck) {
                         Thread.sleep(2000);
                     }
                     if (speedup) {

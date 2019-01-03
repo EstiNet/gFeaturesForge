@@ -44,7 +44,7 @@ public final class ClioteSkyRPC {
       str_ = "";
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -55,7 +55,7 @@ public final class ClioteSkyRPC {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -68,17 +68,17 @@ public final class ClioteSkyRPC {
             case 0:
               done = true;
               break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              str_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              str_ = s;
               break;
             }
           }
@@ -98,6 +98,7 @@ public final class ClioteSkyRPC {
       return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_String_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_String_fieldAccessorTable
@@ -106,16 +107,16 @@ public final class ClioteSkyRPC {
     }
 
     public static final int STR_FIELD_NUMBER = 1;
-    private volatile Object str_;
+    private volatile java.lang.Object str_;
     /**
      * <code>string str = 1;</code>
      */
     public java.lang.String getStr() {
-      Object ref = str_;
+      java.lang.Object ref = str_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         str_ = s;
@@ -127,9 +128,9 @@ public final class ClioteSkyRPC {
      */
     public com.google.protobuf.ByteString
         getStrBytes() {
-      Object ref = str_;
+      java.lang.Object ref = str_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         str_ = b;
@@ -140,6 +141,7 @@ public final class ClioteSkyRPC {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -149,6 +151,7 @@ public final class ClioteSkyRPC {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getStrBytes().isEmpty()) {
@@ -157,6 +160,7 @@ public final class ClioteSkyRPC {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -170,8 +174,8 @@ public final class ClioteSkyRPC {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
@@ -187,7 +191,7 @@ public final class ClioteSkyRPC {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -271,6 +275,7 @@ public final class ClioteSkyRPC {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -278,12 +283,13 @@ public final class ClioteSkyRPC {
     public static Builder newBuilder(net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.String prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
@@ -301,6 +307,7 @@ public final class ClioteSkyRPC {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_String_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_String_fieldAccessorTable
@@ -323,6 +330,7 @@ public final class ClioteSkyRPC {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         str_ = "";
@@ -330,15 +338,18 @@ public final class ClioteSkyRPC {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_String_descriptor;
       }
 
+      @java.lang.Override
       public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.String getDefaultInstanceForType() {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.String.getDefaultInstance();
       }
 
+      @java.lang.Override
       public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.String build() {
         net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.String result = buildPartial();
         if (!result.isInitialized()) {
@@ -347,6 +358,7 @@ public final class ClioteSkyRPC {
         return result;
       }
 
+      @java.lang.Override
       public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.String buildPartial() {
         net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.String result = new net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.String(this);
         result.str_ = str_;
@@ -354,32 +366,39 @@ public final class ClioteSkyRPC {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.String) {
           return mergeFrom((net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.String)other);
@@ -400,10 +419,12 @@ public final class ClioteSkyRPC {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -422,12 +443,12 @@ public final class ClioteSkyRPC {
         return this;
       }
 
-      private Object str_ = "";
+      private java.lang.Object str_ = "";
       /**
        * <code>string str = 1;</code>
        */
       public java.lang.String getStr() {
-        Object ref = str_;
+        java.lang.Object ref = str_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
@@ -443,9 +464,9 @@ public final class ClioteSkyRPC {
        */
       public com.google.protobuf.ByteString
           getStrBytes() {
-        Object ref = str_;
+        java.lang.Object ref = str_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           str_ = b;
@@ -462,7 +483,7 @@ public final class ClioteSkyRPC {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         str_ = value;
         onChanged();
         return this;
@@ -471,7 +492,7 @@ public final class ClioteSkyRPC {
        * <code>string str = 1;</code>
        */
       public Builder clearStr() {
-
+        
         str_ = getDefaultInstance().getStr();
         onChanged();
         return this;
@@ -485,16 +506,18 @@ public final class ClioteSkyRPC {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         str_ = value;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -516,6 +539,7 @@ public final class ClioteSkyRPC {
 
     private static final com.google.protobuf.Parser<String>
         PARSER = new com.google.protobuf.AbstractParser<String>() {
+      @java.lang.Override
       public String parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -528,11 +552,12 @@ public final class ClioteSkyRPC {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<String> getParserForType() {
       return PARSER;
     }
 
+    @java.lang.Override
     public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.String getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -564,7 +589,7 @@ public final class ClioteSkyRPC {
       b_ = false;
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -575,7 +600,7 @@ public final class ClioteSkyRPC {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -588,16 +613,16 @@ public final class ClioteSkyRPC {
             case 0:
               done = true;
               break;
+            case 8: {
+
+              b_ = input.readBool();
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
-              break;
-            }
-            case 8: {
-
-              b_ = input.readBool();
               break;
             }
           }
@@ -617,6 +642,7 @@ public final class ClioteSkyRPC {
       return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_Boolean_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_Boolean_fieldAccessorTable
@@ -634,6 +660,7 @@ public final class ClioteSkyRPC {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -643,6 +670,7 @@ public final class ClioteSkyRPC {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (b_ != false) {
@@ -651,6 +679,7 @@ public final class ClioteSkyRPC {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -665,8 +694,8 @@ public final class ClioteSkyRPC {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
@@ -682,7 +711,7 @@ public final class ClioteSkyRPC {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -767,6 +796,7 @@ public final class ClioteSkyRPC {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -774,12 +804,13 @@ public final class ClioteSkyRPC {
     public static Builder newBuilder(net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Boolean prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
@@ -797,6 +828,7 @@ public final class ClioteSkyRPC {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_Boolean_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_Boolean_fieldAccessorTable
@@ -819,6 +851,7 @@ public final class ClioteSkyRPC {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         b_ = false;
@@ -826,15 +859,18 @@ public final class ClioteSkyRPC {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_Boolean_descriptor;
       }
 
+      @java.lang.Override
       public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Boolean getDefaultInstanceForType() {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Boolean.getDefaultInstance();
       }
 
+      @java.lang.Override
       public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Boolean build() {
         net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Boolean result = buildPartial();
         if (!result.isInitialized()) {
@@ -843,6 +879,7 @@ public final class ClioteSkyRPC {
         return result;
       }
 
+      @java.lang.Override
       public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Boolean buildPartial() {
         net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Boolean result = new net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Boolean(this);
         result.b_ = b_;
@@ -850,32 +887,39 @@ public final class ClioteSkyRPC {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Boolean) {
           return mergeFrom((net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Boolean)other);
@@ -895,10 +939,12 @@ public final class ClioteSkyRPC {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -928,7 +974,7 @@ public final class ClioteSkyRPC {
        * <code>bool b = 1;</code>
        */
       public Builder setB(boolean value) {
-
+        
         b_ = value;
         onChanged();
         return this;
@@ -937,16 +983,18 @@ public final class ClioteSkyRPC {
        * <code>bool b = 1;</code>
        */
       public Builder clearB() {
-
+        
         b_ = false;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -968,6 +1016,7 @@ public final class ClioteSkyRPC {
 
     private static final com.google.protobuf.Parser<Boolean>
         PARSER = new com.google.protobuf.AbstractParser<Boolean>() {
+      @java.lang.Override
       public Boolean parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -980,11 +1029,12 @@ public final class ClioteSkyRPC {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<Boolean> getParserForType() {
       return PARSER;
     }
 
+    @java.lang.Override
     public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Boolean getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1010,7 +1060,7 @@ public final class ClioteSkyRPC {
     private Empty() {
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1021,7 +1071,7 @@ public final class ClioteSkyRPC {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1057,6 +1107,7 @@ public final class ClioteSkyRPC {
       return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_Empty_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_Empty_fieldAccessorTable
@@ -1065,6 +1116,7 @@ public final class ClioteSkyRPC {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1074,11 +1126,13 @@ public final class ClioteSkyRPC {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1089,8 +1143,8 @@ public final class ClioteSkyRPC {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
@@ -1104,7 +1158,7 @@ public final class ClioteSkyRPC {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -1186,6 +1240,7 @@ public final class ClioteSkyRPC {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1193,12 +1248,13 @@ public final class ClioteSkyRPC {
     public static Builder newBuilder(net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Empty prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
@@ -1216,6 +1272,7 @@ public final class ClioteSkyRPC {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_Empty_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_Empty_fieldAccessorTable
@@ -1238,20 +1295,24 @@ public final class ClioteSkyRPC {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_Empty_descriptor;
       }
 
+      @java.lang.Override
       public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Empty getDefaultInstanceForType() {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Empty.getDefaultInstance();
       }
 
+      @java.lang.Override
       public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Empty build() {
         net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Empty result = buildPartial();
         if (!result.isInitialized()) {
@@ -1260,38 +1321,46 @@ public final class ClioteSkyRPC {
         return result;
       }
 
+      @java.lang.Override
       public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Empty buildPartial() {
         net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Empty result = new net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Empty(this);
         onBuilt();
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Empty) {
           return mergeFrom((net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Empty)other);
@@ -1308,10 +1377,12 @@ public final class ClioteSkyRPC {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1329,11 +1400,13 @@ public final class ClioteSkyRPC {
         }
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1355,6 +1428,7 @@ public final class ClioteSkyRPC {
 
     private static final com.google.protobuf.Parser<Empty>
         PARSER = new com.google.protobuf.AbstractParser<Empty>() {
+      @java.lang.Override
       public Empty parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1367,11 +1441,12 @@ public final class ClioteSkyRPC {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<Empty> getParserForType() {
       return PARSER;
     }
 
+    @java.lang.Override
     public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Empty getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1408,7 +1483,7 @@ public final class ClioteSkyRPC {
       token_ = "";
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1419,7 +1494,7 @@ public final class ClioteSkyRPC {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -1432,17 +1507,17 @@ public final class ClioteSkyRPC {
             case 0:
               done = true;
               break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              token_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              token_ = s;
               break;
             }
           }
@@ -1462,6 +1537,7 @@ public final class ClioteSkyRPC {
       return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_Token_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_Token_fieldAccessorTable
@@ -1470,16 +1546,16 @@ public final class ClioteSkyRPC {
     }
 
     public static final int TOKEN_FIELD_NUMBER = 1;
-    private volatile Object token_;
+    private volatile java.lang.Object token_;
     /**
      * <code>string token = 1;</code>
      */
     public java.lang.String getToken() {
-      Object ref = token_;
+      java.lang.Object ref = token_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         token_ = s;
@@ -1491,9 +1567,9 @@ public final class ClioteSkyRPC {
      */
     public com.google.protobuf.ByteString
         getTokenBytes() {
-      Object ref = token_;
+      java.lang.Object ref = token_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         token_ = b;
@@ -1504,6 +1580,7 @@ public final class ClioteSkyRPC {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1513,6 +1590,7 @@ public final class ClioteSkyRPC {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getTokenBytes().isEmpty()) {
@@ -1521,6 +1599,7 @@ public final class ClioteSkyRPC {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1534,8 +1613,8 @@ public final class ClioteSkyRPC {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
@@ -1551,7 +1630,7 @@ public final class ClioteSkyRPC {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -1635,6 +1714,7 @@ public final class ClioteSkyRPC {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1642,12 +1722,13 @@ public final class ClioteSkyRPC {
     public static Builder newBuilder(net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Token prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
@@ -1665,6 +1746,7 @@ public final class ClioteSkyRPC {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_Token_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_Token_fieldAccessorTable
@@ -1687,6 +1769,7 @@ public final class ClioteSkyRPC {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         token_ = "";
@@ -1694,15 +1777,18 @@ public final class ClioteSkyRPC {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_Token_descriptor;
       }
 
+      @java.lang.Override
       public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Token getDefaultInstanceForType() {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Token.getDefaultInstance();
       }
 
+      @java.lang.Override
       public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Token build() {
         net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Token result = buildPartial();
         if (!result.isInitialized()) {
@@ -1711,6 +1797,7 @@ public final class ClioteSkyRPC {
         return result;
       }
 
+      @java.lang.Override
       public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Token buildPartial() {
         net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Token result = new net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Token(this);
         result.token_ = token_;
@@ -1718,32 +1805,39 @@ public final class ClioteSkyRPC {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Token) {
           return mergeFrom((net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Token)other);
@@ -1764,10 +1858,12 @@ public final class ClioteSkyRPC {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1786,12 +1882,12 @@ public final class ClioteSkyRPC {
         return this;
       }
 
-      private Object token_ = "";
+      private java.lang.Object token_ = "";
       /**
        * <code>string token = 1;</code>
        */
       public java.lang.String getToken() {
-        Object ref = token_;
+        java.lang.Object ref = token_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
@@ -1807,9 +1903,9 @@ public final class ClioteSkyRPC {
        */
       public com.google.protobuf.ByteString
           getTokenBytes() {
-        Object ref = token_;
+        java.lang.Object ref = token_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           token_ = b;
@@ -1826,7 +1922,7 @@ public final class ClioteSkyRPC {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         token_ = value;
         onChanged();
         return this;
@@ -1835,7 +1931,7 @@ public final class ClioteSkyRPC {
        * <code>string token = 1;</code>
        */
       public Builder clearToken() {
-
+        
         token_ = getDefaultInstance().getToken();
         onChanged();
         return this;
@@ -1849,16 +1945,18 @@ public final class ClioteSkyRPC {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         token_ = value;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1880,6 +1978,7 @@ public final class ClioteSkyRPC {
 
     private static final com.google.protobuf.Parser<Token>
         PARSER = new com.google.protobuf.AbstractParser<Token>() {
+      @java.lang.Override
       public Token parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1892,11 +1991,12 @@ public final class ClioteSkyRPC {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<Token> getParserForType() {
       return PARSER;
     }
 
+    @java.lang.Override
     public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Token getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1950,7 +2050,7 @@ public final class ClioteSkyRPC {
       sender_ = "";
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1961,7 +2061,7 @@ public final class ClioteSkyRPC {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -1974,13 +2074,6 @@ public final class ClioteSkyRPC {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
 
               data_ = input.readBytes();
@@ -1996,6 +2089,13 @@ public final class ClioteSkyRPC {
               java.lang.String s = input.readStringRequireUtf8();
 
               sender_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -2015,6 +2115,7 @@ public final class ClioteSkyRPC {
       return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_ClioteMessage_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_ClioteMessage_fieldAccessorTable
@@ -2032,16 +2133,16 @@ public final class ClioteSkyRPC {
     }
 
     public static final int IDENTIFIER_FIELD_NUMBER = 2;
-    private volatile Object identifier_;
+    private volatile java.lang.Object identifier_;
     /**
      * <code>string identifier = 2;</code>
      */
     public java.lang.String getIdentifier() {
-      Object ref = identifier_;
+      java.lang.Object ref = identifier_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         identifier_ = s;
@@ -2053,9 +2154,9 @@ public final class ClioteSkyRPC {
      */
     public com.google.protobuf.ByteString
         getIdentifierBytes() {
-      Object ref = identifier_;
+      java.lang.Object ref = identifier_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         identifier_ = b;
@@ -2066,16 +2167,16 @@ public final class ClioteSkyRPC {
     }
 
     public static final int SENDER_FIELD_NUMBER = 3;
-    private volatile Object sender_;
+    private volatile java.lang.Object sender_;
     /**
      * <code>string sender = 3;</code>
      */
     public java.lang.String getSender() {
-      Object ref = sender_;
+      java.lang.Object ref = sender_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         sender_ = s;
@@ -2087,9 +2188,9 @@ public final class ClioteSkyRPC {
      */
     public com.google.protobuf.ByteString
         getSenderBytes() {
-      Object ref = sender_;
+      java.lang.Object ref = sender_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         sender_ = b;
@@ -2100,6 +2201,7 @@ public final class ClioteSkyRPC {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2109,6 +2211,7 @@ public final class ClioteSkyRPC {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!data_.isEmpty()) {
@@ -2123,6 +2226,7 @@ public final class ClioteSkyRPC {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2143,8 +2247,8 @@ public final class ClioteSkyRPC {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
@@ -2164,7 +2268,7 @@ public final class ClioteSkyRPC {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -2252,6 +2356,7 @@ public final class ClioteSkyRPC {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2259,12 +2364,13 @@ public final class ClioteSkyRPC {
     public static Builder newBuilder(net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteMessage prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
@@ -2282,6 +2388,7 @@ public final class ClioteSkyRPC {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_ClioteMessage_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_ClioteMessage_fieldAccessorTable
@@ -2304,6 +2411,7 @@ public final class ClioteSkyRPC {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         data_ = com.google.protobuf.ByteString.EMPTY;
@@ -2315,15 +2423,18 @@ public final class ClioteSkyRPC {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_ClioteMessage_descriptor;
       }
 
+      @java.lang.Override
       public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteMessage getDefaultInstanceForType() {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteMessage.getDefaultInstance();
       }
 
+      @java.lang.Override
       public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteMessage build() {
         net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteMessage result = buildPartial();
         if (!result.isInitialized()) {
@@ -2332,6 +2443,7 @@ public final class ClioteSkyRPC {
         return result;
       }
 
+      @java.lang.Override
       public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteMessage buildPartial() {
         net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteMessage result = new net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteMessage(this);
         result.data_ = data_;
@@ -2341,32 +2453,39 @@ public final class ClioteSkyRPC {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteMessage) {
           return mergeFrom((net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteMessage)other);
@@ -2394,10 +2513,12 @@ public final class ClioteSkyRPC {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2430,7 +2551,7 @@ public final class ClioteSkyRPC {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         data_ = value;
         onChanged();
         return this;
@@ -2439,18 +2560,18 @@ public final class ClioteSkyRPC {
        * <code>bytes data = 1;</code>
        */
       public Builder clearData() {
-
+        
         data_ = getDefaultInstance().getData();
         onChanged();
         return this;
       }
 
-      private Object identifier_ = "";
+      private java.lang.Object identifier_ = "";
       /**
        * <code>string identifier = 2;</code>
        */
       public java.lang.String getIdentifier() {
-        Object ref = identifier_;
+        java.lang.Object ref = identifier_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
@@ -2466,9 +2587,9 @@ public final class ClioteSkyRPC {
        */
       public com.google.protobuf.ByteString
           getIdentifierBytes() {
-        Object ref = identifier_;
+        java.lang.Object ref = identifier_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           identifier_ = b;
@@ -2485,7 +2606,7 @@ public final class ClioteSkyRPC {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         identifier_ = value;
         onChanged();
         return this;
@@ -2494,7 +2615,7 @@ public final class ClioteSkyRPC {
        * <code>string identifier = 2;</code>
        */
       public Builder clearIdentifier() {
-
+        
         identifier_ = getDefaultInstance().getIdentifier();
         onChanged();
         return this;
@@ -2508,18 +2629,18 @@ public final class ClioteSkyRPC {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         identifier_ = value;
         onChanged();
         return this;
       }
 
-      private Object sender_ = "";
+      private java.lang.Object sender_ = "";
       /**
        * <code>string sender = 3;</code>
        */
       public java.lang.String getSender() {
-        Object ref = sender_;
+        java.lang.Object ref = sender_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
@@ -2535,9 +2656,9 @@ public final class ClioteSkyRPC {
        */
       public com.google.protobuf.ByteString
           getSenderBytes() {
-        Object ref = sender_;
+        java.lang.Object ref = sender_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           sender_ = b;
@@ -2554,7 +2675,7 @@ public final class ClioteSkyRPC {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         sender_ = value;
         onChanged();
         return this;
@@ -2563,7 +2684,7 @@ public final class ClioteSkyRPC {
        * <code>string sender = 3;</code>
        */
       public Builder clearSender() {
-
+        
         sender_ = getDefaultInstance().getSender();
         onChanged();
         return this;
@@ -2577,16 +2698,18 @@ public final class ClioteSkyRPC {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         sender_ = value;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -2608,6 +2731,7 @@ public final class ClioteSkyRPC {
 
     private static final com.google.protobuf.Parser<ClioteMessage>
         PARSER = new com.google.protobuf.AbstractParser<ClioteMessage>() {
+      @java.lang.Override
       public ClioteMessage parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2620,11 +2744,12 @@ public final class ClioteSkyRPC {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<ClioteMessage> getParserForType() {
       return PARSER;
     }
 
+    @java.lang.Override
     public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteMessage getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2689,7 +2814,7 @@ public final class ClioteSkyRPC {
       recipient_ = "";
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -2700,7 +2825,7 @@ public final class ClioteSkyRPC {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -2713,13 +2838,6 @@ public final class ClioteSkyRPC {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
 
               data_ = input.readBytes();
@@ -2743,6 +2861,13 @@ public final class ClioteSkyRPC {
               recipient_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2760,6 +2885,7 @@ public final class ClioteSkyRPC {
       return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_ClioteSend_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_ClioteSend_fieldAccessorTable
@@ -2777,16 +2903,16 @@ public final class ClioteSkyRPC {
     }
 
     public static final int TOKEN_FIELD_NUMBER = 2;
-    private volatile Object token_;
+    private volatile java.lang.Object token_;
     /**
      * <code>string token = 2;</code>
      */
     public java.lang.String getToken() {
-      Object ref = token_;
+      java.lang.Object ref = token_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         token_ = s;
@@ -2798,9 +2924,9 @@ public final class ClioteSkyRPC {
      */
     public com.google.protobuf.ByteString
         getTokenBytes() {
-      Object ref = token_;
+      java.lang.Object ref = token_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         token_ = b;
@@ -2811,16 +2937,16 @@ public final class ClioteSkyRPC {
     }
 
     public static final int IDENTIFIER_FIELD_NUMBER = 3;
-    private volatile Object identifier_;
+    private volatile java.lang.Object identifier_;
     /**
      * <code>string identifier = 3;</code>
      */
     public java.lang.String getIdentifier() {
-      Object ref = identifier_;
+      java.lang.Object ref = identifier_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         identifier_ = s;
@@ -2832,9 +2958,9 @@ public final class ClioteSkyRPC {
      */
     public com.google.protobuf.ByteString
         getIdentifierBytes() {
-      Object ref = identifier_;
+      java.lang.Object ref = identifier_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         identifier_ = b;
@@ -2845,16 +2971,16 @@ public final class ClioteSkyRPC {
     }
 
     public static final int RECIPIENT_FIELD_NUMBER = 4;
-    private volatile Object recipient_;
+    private volatile java.lang.Object recipient_;
     /**
      * <code>string recipient = 4;</code>
      */
     public java.lang.String getRecipient() {
-      Object ref = recipient_;
+      java.lang.Object ref = recipient_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         recipient_ = s;
@@ -2866,9 +2992,9 @@ public final class ClioteSkyRPC {
      */
     public com.google.protobuf.ByteString
         getRecipientBytes() {
-      Object ref = recipient_;
+      java.lang.Object ref = recipient_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         recipient_ = b;
@@ -2879,6 +3005,7 @@ public final class ClioteSkyRPC {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2888,6 +3015,7 @@ public final class ClioteSkyRPC {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!data_.isEmpty()) {
@@ -2905,6 +3033,7 @@ public final class ClioteSkyRPC {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2928,8 +3057,8 @@ public final class ClioteSkyRPC {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
@@ -2951,7 +3080,7 @@ public final class ClioteSkyRPC {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -3041,6 +3170,7 @@ public final class ClioteSkyRPC {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -3048,12 +3178,13 @@ public final class ClioteSkyRPC {
     public static Builder newBuilder(net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteSend prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
@@ -3071,6 +3202,7 @@ public final class ClioteSkyRPC {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_ClioteSend_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_ClioteSend_fieldAccessorTable
@@ -3093,6 +3225,7 @@ public final class ClioteSkyRPC {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         data_ = com.google.protobuf.ByteString.EMPTY;
@@ -3106,15 +3239,18 @@ public final class ClioteSkyRPC {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_ClioteSend_descriptor;
       }
 
+      @java.lang.Override
       public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteSend getDefaultInstanceForType() {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteSend.getDefaultInstance();
       }
 
+      @java.lang.Override
       public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteSend build() {
         net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteSend result = buildPartial();
         if (!result.isInitialized()) {
@@ -3123,6 +3259,7 @@ public final class ClioteSkyRPC {
         return result;
       }
 
+      @java.lang.Override
       public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteSend buildPartial() {
         net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteSend result = new net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteSend(this);
         result.data_ = data_;
@@ -3133,32 +3270,39 @@ public final class ClioteSkyRPC {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteSend) {
           return mergeFrom((net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteSend)other);
@@ -3190,10 +3334,12 @@ public final class ClioteSkyRPC {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3226,7 +3372,7 @@ public final class ClioteSkyRPC {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         data_ = value;
         onChanged();
         return this;
@@ -3235,18 +3381,18 @@ public final class ClioteSkyRPC {
        * <code>bytes data = 1;</code>
        */
       public Builder clearData() {
-
+        
         data_ = getDefaultInstance().getData();
         onChanged();
         return this;
       }
 
-      private Object token_ = "";
+      private java.lang.Object token_ = "";
       /**
        * <code>string token = 2;</code>
        */
       public java.lang.String getToken() {
-        Object ref = token_;
+        java.lang.Object ref = token_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
@@ -3262,9 +3408,9 @@ public final class ClioteSkyRPC {
        */
       public com.google.protobuf.ByteString
           getTokenBytes() {
-        Object ref = token_;
+        java.lang.Object ref = token_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           token_ = b;
@@ -3281,7 +3427,7 @@ public final class ClioteSkyRPC {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         token_ = value;
         onChanged();
         return this;
@@ -3290,7 +3436,7 @@ public final class ClioteSkyRPC {
        * <code>string token = 2;</code>
        */
       public Builder clearToken() {
-
+        
         token_ = getDefaultInstance().getToken();
         onChanged();
         return this;
@@ -3304,18 +3450,18 @@ public final class ClioteSkyRPC {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         token_ = value;
         onChanged();
         return this;
       }
 
-      private Object identifier_ = "";
+      private java.lang.Object identifier_ = "";
       /**
        * <code>string identifier = 3;</code>
        */
       public java.lang.String getIdentifier() {
-        Object ref = identifier_;
+        java.lang.Object ref = identifier_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
@@ -3331,9 +3477,9 @@ public final class ClioteSkyRPC {
        */
       public com.google.protobuf.ByteString
           getIdentifierBytes() {
-        Object ref = identifier_;
+        java.lang.Object ref = identifier_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           identifier_ = b;
@@ -3350,7 +3496,7 @@ public final class ClioteSkyRPC {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         identifier_ = value;
         onChanged();
         return this;
@@ -3359,7 +3505,7 @@ public final class ClioteSkyRPC {
        * <code>string identifier = 3;</code>
        */
       public Builder clearIdentifier() {
-
+        
         identifier_ = getDefaultInstance().getIdentifier();
         onChanged();
         return this;
@@ -3373,18 +3519,18 @@ public final class ClioteSkyRPC {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         identifier_ = value;
         onChanged();
         return this;
       }
 
-      private Object recipient_ = "";
+      private java.lang.Object recipient_ = "";
       /**
        * <code>string recipient = 4;</code>
        */
       public java.lang.String getRecipient() {
-        Object ref = recipient_;
+        java.lang.Object ref = recipient_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
@@ -3400,9 +3546,9 @@ public final class ClioteSkyRPC {
        */
       public com.google.protobuf.ByteString
           getRecipientBytes() {
-        Object ref = recipient_;
+        java.lang.Object ref = recipient_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           recipient_ = b;
@@ -3419,7 +3565,7 @@ public final class ClioteSkyRPC {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         recipient_ = value;
         onChanged();
         return this;
@@ -3428,7 +3574,7 @@ public final class ClioteSkyRPC {
        * <code>string recipient = 4;</code>
        */
       public Builder clearRecipient() {
-
+        
         recipient_ = getDefaultInstance().getRecipient();
         onChanged();
         return this;
@@ -3442,16 +3588,18 @@ public final class ClioteSkyRPC {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         recipient_ = value;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -3473,6 +3621,7 @@ public final class ClioteSkyRPC {
 
     private static final com.google.protobuf.Parser<ClioteSend>
         PARSER = new com.google.protobuf.AbstractParser<ClioteSend>() {
+      @java.lang.Override
       public ClioteSend parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3485,11 +3634,12 @@ public final class ClioteSkyRPC {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<ClioteSend> getParserForType() {
       return PARSER;
     }
 
+    @java.lang.Override
     public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteSend getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3548,7 +3698,7 @@ public final class ClioteSkyRPC {
       category_ = "";
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -3559,7 +3709,7 @@ public final class ClioteSkyRPC {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -3572,13 +3722,6 @@ public final class ClioteSkyRPC {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -3595,6 +3738,13 @@ public final class ClioteSkyRPC {
               java.lang.String s = input.readStringRequireUtf8();
 
               category_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -3614,6 +3764,7 @@ public final class ClioteSkyRPC {
       return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_AuthRequest_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_AuthRequest_fieldAccessorTable
@@ -3622,16 +3773,16 @@ public final class ClioteSkyRPC {
     }
 
     public static final int USER_FIELD_NUMBER = 1;
-    private volatile Object user_;
+    private volatile java.lang.Object user_;
     /**
      * <code>string user = 1;</code>
      */
     public java.lang.String getUser() {
-      Object ref = user_;
+      java.lang.Object ref = user_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         user_ = s;
@@ -3643,9 +3794,9 @@ public final class ClioteSkyRPC {
      */
     public com.google.protobuf.ByteString
         getUserBytes() {
-      Object ref = user_;
+      java.lang.Object ref = user_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         user_ = b;
@@ -3656,16 +3807,16 @@ public final class ClioteSkyRPC {
     }
 
     public static final int PASSWORD_FIELD_NUMBER = 2;
-    private volatile Object password_;
+    private volatile java.lang.Object password_;
     /**
      * <code>string password = 2;</code>
      */
     public java.lang.String getPassword() {
-      Object ref = password_;
+      java.lang.Object ref = password_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         password_ = s;
@@ -3677,9 +3828,9 @@ public final class ClioteSkyRPC {
      */
     public com.google.protobuf.ByteString
         getPasswordBytes() {
-      Object ref = password_;
+      java.lang.Object ref = password_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         password_ = b;
@@ -3690,16 +3841,16 @@ public final class ClioteSkyRPC {
     }
 
     public static final int CATEGORY_FIELD_NUMBER = 3;
-    private volatile Object category_;
+    private volatile java.lang.Object category_;
     /**
      * <code>string category = 3;</code>
      */
     public java.lang.String getCategory() {
-      Object ref = category_;
+      java.lang.Object ref = category_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         category_ = s;
@@ -3711,9 +3862,9 @@ public final class ClioteSkyRPC {
      */
     public com.google.protobuf.ByteString
         getCategoryBytes() {
-      Object ref = category_;
+      java.lang.Object ref = category_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         category_ = b;
@@ -3724,6 +3875,7 @@ public final class ClioteSkyRPC {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3733,6 +3885,7 @@ public final class ClioteSkyRPC {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUserBytes().isEmpty()) {
@@ -3747,6 +3900,7 @@ public final class ClioteSkyRPC {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3766,8 +3920,8 @@ public final class ClioteSkyRPC {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
@@ -3787,7 +3941,7 @@ public final class ClioteSkyRPC {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -3875,6 +4029,7 @@ public final class ClioteSkyRPC {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -3882,12 +4037,13 @@ public final class ClioteSkyRPC {
     public static Builder newBuilder(net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.AuthRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
@@ -3905,6 +4061,7 @@ public final class ClioteSkyRPC {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_AuthRequest_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_AuthRequest_fieldAccessorTable
@@ -3927,6 +4084,7 @@ public final class ClioteSkyRPC {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         user_ = "";
@@ -3938,15 +4096,18 @@ public final class ClioteSkyRPC {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.internal_static_AuthRequest_descriptor;
       }
 
+      @java.lang.Override
       public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.AuthRequest getDefaultInstanceForType() {
         return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.AuthRequest.getDefaultInstance();
       }
 
+      @java.lang.Override
       public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.AuthRequest build() {
         net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.AuthRequest result = buildPartial();
         if (!result.isInitialized()) {
@@ -3955,6 +4116,7 @@ public final class ClioteSkyRPC {
         return result;
       }
 
+      @java.lang.Override
       public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.AuthRequest buildPartial() {
         net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.AuthRequest result = new net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.AuthRequest(this);
         result.user_ = user_;
@@ -3964,32 +4126,39 @@ public final class ClioteSkyRPC {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.AuthRequest) {
           return mergeFrom((net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.AuthRequest)other);
@@ -4018,10 +4187,12 @@ public final class ClioteSkyRPC {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4040,12 +4211,12 @@ public final class ClioteSkyRPC {
         return this;
       }
 
-      private Object user_ = "";
+      private java.lang.Object user_ = "";
       /**
        * <code>string user = 1;</code>
        */
       public java.lang.String getUser() {
-        Object ref = user_;
+        java.lang.Object ref = user_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
@@ -4061,9 +4232,9 @@ public final class ClioteSkyRPC {
        */
       public com.google.protobuf.ByteString
           getUserBytes() {
-        Object ref = user_;
+        java.lang.Object ref = user_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           user_ = b;
@@ -4080,7 +4251,7 @@ public final class ClioteSkyRPC {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         user_ = value;
         onChanged();
         return this;
@@ -4089,7 +4260,7 @@ public final class ClioteSkyRPC {
        * <code>string user = 1;</code>
        */
       public Builder clearUser() {
-
+        
         user_ = getDefaultInstance().getUser();
         onChanged();
         return this;
@@ -4103,18 +4274,18 @@ public final class ClioteSkyRPC {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         user_ = value;
         onChanged();
         return this;
       }
 
-      private Object password_ = "";
+      private java.lang.Object password_ = "";
       /**
        * <code>string password = 2;</code>
        */
       public java.lang.String getPassword() {
-        Object ref = password_;
+        java.lang.Object ref = password_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
@@ -4130,9 +4301,9 @@ public final class ClioteSkyRPC {
        */
       public com.google.protobuf.ByteString
           getPasswordBytes() {
-        Object ref = password_;
+        java.lang.Object ref = password_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           password_ = b;
@@ -4149,7 +4320,7 @@ public final class ClioteSkyRPC {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         password_ = value;
         onChanged();
         return this;
@@ -4158,7 +4329,7 @@ public final class ClioteSkyRPC {
        * <code>string password = 2;</code>
        */
       public Builder clearPassword() {
-
+        
         password_ = getDefaultInstance().getPassword();
         onChanged();
         return this;
@@ -4172,18 +4343,18 @@ public final class ClioteSkyRPC {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         password_ = value;
         onChanged();
         return this;
       }
 
-      private Object category_ = "";
+      private java.lang.Object category_ = "";
       /**
        * <code>string category = 3;</code>
        */
       public java.lang.String getCategory() {
-        Object ref = category_;
+        java.lang.Object ref = category_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
@@ -4199,9 +4370,9 @@ public final class ClioteSkyRPC {
        */
       public com.google.protobuf.ByteString
           getCategoryBytes() {
-        Object ref = category_;
+        java.lang.Object ref = category_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           category_ = b;
@@ -4218,7 +4389,7 @@ public final class ClioteSkyRPC {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         category_ = value;
         onChanged();
         return this;
@@ -4227,7 +4398,7 @@ public final class ClioteSkyRPC {
        * <code>string category = 3;</code>
        */
       public Builder clearCategory() {
-
+        
         category_ = getDefaultInstance().getCategory();
         onChanged();
         return this;
@@ -4241,16 +4412,18 @@ public final class ClioteSkyRPC {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         category_ = value;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -4272,6 +4445,7 @@ public final class ClioteSkyRPC {
 
     private static final com.google.protobuf.Parser<AuthRequest>
         PARSER = new com.google.protobuf.AbstractParser<AuthRequest>() {
+      @java.lang.Override
       public AuthRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4284,11 +4458,12 @@ public final class ClioteSkyRPC {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<AuthRequest> getParserForType() {
       return PARSER;
     }
 
+    @java.lang.Override
     public net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.AuthRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }

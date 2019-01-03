@@ -1,10 +1,19 @@
 package net.estinet.gFeatures.ClioteSky;
 
-import io.grpc.stub.ClientCalls;
-
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.*;
-import static io.grpc.stub.ServerCalls.*;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
@@ -19,7 +28,7 @@ public final class ClioteSkyServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @Deprecated // Use {@link #getRequestMethod()} instead.
+  @java.lang.Deprecated // Use {@link #getRequestMethod()} instead. 
   public static final io.grpc.MethodDescriptor<net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Token,
       net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteMessage> METHOD_REQUEST = getRequestMethodHelper();
 
@@ -38,7 +47,7 @@ public final class ClioteSkyServiceGrpc {
     if ((getRequestMethod = ClioteSkyServiceGrpc.getRequestMethod) == null) {
       synchronized (ClioteSkyServiceGrpc.class) {
         if ((getRequestMethod = ClioteSkyServiceGrpc.getRequestMethod) == null) {
-          ClioteSkyServiceGrpc.getRequestMethod = getRequestMethod =
+          ClioteSkyServiceGrpc.getRequestMethod = getRequestMethod = 
               io.grpc.MethodDescriptor.<net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Token, net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteMessage>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(
@@ -56,7 +65,7 @@ public final class ClioteSkyServiceGrpc {
      return getRequestMethod;
   }
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @Deprecated // Use {@link #getSendMethod()} instead.
+  @java.lang.Deprecated // Use {@link #getSendMethod()} instead. 
   public static final io.grpc.MethodDescriptor<net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteSend,
       net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Empty> METHOD_SEND = getSendMethodHelper();
 
@@ -75,7 +84,7 @@ public final class ClioteSkyServiceGrpc {
     if ((getSendMethod = ClioteSkyServiceGrpc.getSendMethod) == null) {
       synchronized (ClioteSkyServiceGrpc.class) {
         if ((getSendMethod = ClioteSkyServiceGrpc.getSendMethod) == null) {
-          ClioteSkyServiceGrpc.getSendMethod = getSendMethod =
+          ClioteSkyServiceGrpc.getSendMethod = getSendMethod = 
               io.grpc.MethodDescriptor.<net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteSend, net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
@@ -93,7 +102,7 @@ public final class ClioteSkyServiceGrpc {
      return getSendMethod;
   }
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @Deprecated // Use {@link #getAuthMethod()} instead.
+  @java.lang.Deprecated // Use {@link #getAuthMethod()} instead. 
   public static final io.grpc.MethodDescriptor<net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.AuthRequest,
       net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Token> METHOD_AUTH = getAuthMethodHelper();
 
@@ -112,7 +121,7 @@ public final class ClioteSkyServiceGrpc {
     if ((getAuthMethod = ClioteSkyServiceGrpc.getAuthMethod) == null) {
       synchronized (ClioteSkyServiceGrpc.class) {
         if ((getAuthMethod = ClioteSkyServiceGrpc.getAuthMethod) == null) {
-          ClioteSkyServiceGrpc.getAuthMethod = getAuthMethod =
+          ClioteSkyServiceGrpc.getAuthMethod = getAuthMethod = 
               io.grpc.MethodDescriptor.<net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.AuthRequest, net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Token>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
@@ -130,7 +139,7 @@ public final class ClioteSkyServiceGrpc {
      return getAuthMethod;
   }
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @Deprecated // Use {@link #getCheckNameTakenMethod()} instead.
+  @java.lang.Deprecated // Use {@link #getCheckNameTakenMethod()} instead. 
   public static final io.grpc.MethodDescriptor<net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.String,
       net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Boolean> METHOD_CHECK_NAME_TAKEN = getCheckNameTakenMethodHelper();
 
@@ -149,7 +158,7 @@ public final class ClioteSkyServiceGrpc {
     if ((getCheckNameTakenMethod = ClioteSkyServiceGrpc.getCheckNameTakenMethod) == null) {
       synchronized (ClioteSkyServiceGrpc.class) {
         if ((getCheckNameTakenMethod = ClioteSkyServiceGrpc.getCheckNameTakenMethod) == null) {
-          ClioteSkyServiceGrpc.getCheckNameTakenMethod = getCheckNameTakenMethod =
+          ClioteSkyServiceGrpc.getCheckNameTakenMethod = getCheckNameTakenMethod = 
               io.grpc.MethodDescriptor.<net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.String, net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Boolean>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
@@ -225,7 +234,7 @@ public final class ClioteSkyServiceGrpc {
       asyncUnimplementedUnaryCall(getCheckNameTakenMethodHelper(), responseObserver);
     }
 
-    @Override public final io.grpc.ServerServiceDefinition bindService() {
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getRequestMethodHelper(),
@@ -271,7 +280,7 @@ public final class ClioteSkyServiceGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected ClioteSkyServiceStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new ClioteSkyServiceStub(channel, callOptions);
@@ -281,7 +290,7 @@ public final class ClioteSkyServiceGrpc {
      */
     public void request(net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Token request,
         io.grpc.stub.StreamObserver<net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteMessage> responseObserver) {
-      ClientCalls.asyncServerStreamingCall(
+      asyncServerStreamingCall(
           getChannel().newCall(getRequestMethodHelper(), getCallOptions()), request, responseObserver);
     }
 
@@ -289,7 +298,7 @@ public final class ClioteSkyServiceGrpc {
      */
     public void send(net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.ClioteSend request,
         io.grpc.stub.StreamObserver<net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Empty> responseObserver) {
-      ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getSendMethodHelper(), getCallOptions()), request, responseObserver);
     }
 
@@ -297,7 +306,7 @@ public final class ClioteSkyServiceGrpc {
      */
     public void auth(net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.AuthRequest request,
         io.grpc.stub.StreamObserver<net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Token> responseObserver) {
-      ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getAuthMethodHelper(), getCallOptions()), request, responseObserver);
     }
 
@@ -308,7 +317,7 @@ public final class ClioteSkyServiceGrpc {
      */
     public void checkNameTaken(net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.String request,
         io.grpc.stub.StreamObserver<net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.Boolean> responseObserver) {
-      ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCheckNameTakenMethodHelper(), getCallOptions()), request, responseObserver);
     }
   }
@@ -325,7 +334,7 @@ public final class ClioteSkyServiceGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected ClioteSkyServiceBlockingStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new ClioteSkyServiceBlockingStub(channel, callOptions);
@@ -376,7 +385,7 @@ public final class ClioteSkyServiceGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected ClioteSkyServiceFutureStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new ClioteSkyServiceFutureStub(channel, callOptions);
@@ -428,8 +437,8 @@ public final class ClioteSkyServiceGrpc {
       this.methodId = methodId;
     }
 
-    @Override
-    @SuppressWarnings("unchecked")
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_REQUEST:
@@ -453,8 +462,8 @@ public final class ClioteSkyServiceGrpc {
       }
     }
 
-    @Override
-    @SuppressWarnings("unchecked")
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
@@ -468,12 +477,12 @@ public final class ClioteSkyServiceGrpc {
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     ClioteSkyServiceBaseDescriptorSupplier() {}
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return net.estinet.gFeatures.ClioteSky.ClioteSkyRPC.getDescriptor();
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
       return getFileDescriptor().findServiceByName("ClioteSkyService");
     }
@@ -493,7 +502,7 @@ public final class ClioteSkyServiceGrpc {
       this.methodName = methodName;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
       return getServiceDescriptor().findMethodByName(methodName);
     }
