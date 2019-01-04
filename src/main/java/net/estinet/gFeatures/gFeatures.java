@@ -1,9 +1,11 @@
 package net.estinet.gFeatures;
 
 import net.estinet.gFeatures.ClioteSky.ClioteSky;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Config;
 import net.minecraftforge.event.ServerChatEvent;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -58,17 +60,27 @@ public class gFeatures {
     // EstiChat port
     @SubscribeEvent
     public void chat(ServerChatEvent event) {
-        ClioteSky.getInstance().sendAsync(ClioteSky.stringToBytes(event.getPlayer().getName() + " <" + event.getPlayer().getDisplayName() + "> " + event.getMessage()), "chat", "Bungee");
-        estiChatLastSent = event.getMessage();
+        ClioteSky.getInstance().sendAsync(ClioteSky.stringToBytes(event.getPlayer().getName() + " <" + event.getPlayer().getDisplayName() + "> " + event.getComponent().getUnformattedText()), "chat", "Bungee");
+        estiChatLastSent = event.getComponent().getUnformattedText();
     }
 
     @SubscribeEvent
     public void join(PlayerEvent.PlayerLoggedInEvent event) {
         ClioteSky.getInstance().sendAsync(ClioteSky.stringToBytes(event.player.getName() + " §6[§3Join§6] §r" + event.player.getDisplayNameString()), "chat", "Bungee");
+        updatePlayerList();
     }
 
     @SubscribeEvent
     public void leave(PlayerEvent.PlayerLoggedOutEvent event) {
         ClioteSky.getInstance().sendAsync(ClioteSky.stringToBytes(event.player.getName() + " §6[§3Leave§6] §r" + event.player.getDisplayNameString()), "chat", "Bungee");
+        updatePlayerList();
+    }
+
+    public static void updatePlayerList() {
+        StringBuilder cliMsg = new StringBuilder();
+        for (EntityPlayer p : FMLCommonHandler.instance().getMinecraftServerInstance().getPlayerList().getPlayers()) {
+            cliMsg.append(p.getName()).append("§");
+        }
+        ClioteSky.getInstance().sendAsync(ClioteSky.stringToBytes("update " + cliMsg.substring(0, cliMsg.length()-1)), "fakeplayer", "Bungee"); // update player list
     }
 }
