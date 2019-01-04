@@ -44,6 +44,7 @@ public class gFeatures {
         logger.info("Initializing gFeatures " + VERSION + "...");
 
         ClioteSky.addHook(new ConsoleClioteHook("consolechat"));
+        ClioteSky.addHook(new DisplayMessageClioteHook("displaymessage"));
         logger.info("Initialized gFeatures.");
     }
 
