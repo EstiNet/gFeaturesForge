@@ -1,6 +1,7 @@
 package net.estinet.gFeatures;
 
 import net.estinet.gFeatures.ClioteSky.ClioteSky;
+import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Config;
@@ -9,12 +10,18 @@ import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 import org.apache.logging.log4j.Logger;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Mod(modid = gFeatures.MODID, name = gFeatures.NAME, version = gFeatures.VERSION, serverSideOnly = true, acceptableRemoteVersions = "*")
 public class gFeatures {
+
+    public static List<ICommandSender> playersWaitingForList = new ArrayList<>();
 
     @Config(modid = gFeatures.MODID, name = gFeatures.MODID + "_map")
     public static class gFeaturesConfig {
@@ -45,6 +52,7 @@ public class gFeatures {
 
         ClioteSky.addHook(new ConsoleClioteHook("consolechat"));
         ClioteSky.addHook(new DisplayMessageClioteHook("displaymessage"));
+        ClioteSky.addHook(new InfoPlayerListClioteHook("info playerlist"));
         logger.info("Initialized gFeatures.");
     }
 
@@ -55,7 +63,14 @@ public class gFeatures {
         logger.info("Connecting to ClioteSky...");
         ClioteSky.initClioteSky();
         MinecraftForge.EVENT_BUS.register(new gFeatures());
+        updatePlayerList();
         logger.info("Started gFeatures.");
+    }
+
+    @Mod.EventHandler
+    public static void init(FMLServerStartingEvent event) {
+        event.registerServerCommand(new ListCommand());
+        event.registerServerCommand(new HubCommand());
     }
 
     // EstiChat port
@@ -82,6 +97,6 @@ public class gFeatures {
         for (EntityPlayer p : FMLCommonHandler.instance().getMinecraftServerInstance().getPlayerList().getPlayers()) {
             cliMsg.append(p.getName()).append("§");
         }
-        ClioteSky.getInstance().sendAsync(ClioteSky.stringToBytes("update " + cliMsg.substring(0, cliMsg.length()-1)), "fakeplayer", "Bungee"); // update player list
+        ClioteSky.getInstance().sendAsync(ClioteSky.stringToBytes("update " + cliMsg.substring(0, cliMsg.length() - 1)), "fakeplayer", "Bungee"); // update player list
     }
 }
