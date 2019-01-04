@@ -22,12 +22,16 @@ public class ConsoleClioteHook extends ClioteHook {
         if (args.size() == 0) return;
         if (server.equals(ClioteSky.name)) return;
 
-        if (args.get(0).equals("[Join]")) {
-            args.set(0, "§6[§3Join§6]§r");
-        } else if (args.get(0).equals("[Leave]")) {
-            args.set(0, "§6[§3Leave§6]§r");
-        } else if (args.get(0).equals("[Switch]")) {
-            args.set(0, "§6[§Switch§6]§r");
+        switch (args.get(0)) {
+            case "[Join]":
+                args.set(0, "§6[§3Join§6]§r");
+                break;
+            case "[Leave]":
+                args.set(0, "§6[§3Leave§6]§r");
+                break;
+            case "[Switch]":
+                args.set(0, "§6[§Switch§6]§r");
+                break;
         }
 
         StringBuilder msg = new StringBuilder();
