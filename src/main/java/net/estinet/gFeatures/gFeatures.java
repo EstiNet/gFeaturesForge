@@ -64,11 +64,11 @@ public class gFeatures {
 
     @SubscribeEvent
     public void join(PlayerEvent.PlayerLoggedInEvent event) {
-        ClioteSky.getInstance().sendAsync(ClioteSky.stringToBytes(event.player.getName() + "§6[§3Join§6] §r" + event.player.getDisplayNameString()), "chat", "Bungee");
+        ClioteSky.getInstance().sendAsync(ClioteSky.stringToBytes(event.player.getName() + " §6[§3Join§6] §r" + event.player.getDisplayNameString()), "chat", "Bungee");
     }
 
     @SubscribeEvent
     public void leave(PlayerEvent.PlayerLoggedOutEvent event) {
-        ClioteSky.getInstance().sendAsync(ClioteSky.stringToBytes(event.player.getName() + "§6[§3Leave§6] §r" + event.player.getDisplayNameString()), "chat", "Bungee");
+        ClioteSky.getInstance().sendAsync(ClioteSky.stringToBytes(event.player.getName() + " §6[§3Leave§6] §r" + event.player.getDisplayNameString()), "chat", "Bungee");
     }
 }

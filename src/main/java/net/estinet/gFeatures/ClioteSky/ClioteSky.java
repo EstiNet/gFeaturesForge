@@ -20,7 +20,7 @@ import java.util.*;
 public class ClioteSky {
     public static boolean checkTLS;
 
-    private static String name, password, address, port, category;
+    public static String name, password, address, port, category;
 
     private static List<ClioteHook> clioteHookList = new ArrayList<>();
 
