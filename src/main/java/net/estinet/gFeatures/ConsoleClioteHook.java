@@ -26,6 +26,8 @@ public class ConsoleClioteHook extends ClioteHook {
             args.set(0, "§6[§3Join§6]§r");
         } else if (args.get(0).equals("[Leave]")) {
             args.set(0, "§6[§3Leave§6]§r");
+        } else if (args.get(0).equals("[Switch]")) {
+            args.set(0, "§6[§Switch§6]§r");
         }
 
         StringBuilder msg = new StringBuilder();

@@ -81,7 +81,7 @@ public class gFeatures {
     // EstiChat port
     @SubscribeEvent
     public void chat(ServerChatEvent event) {
-        ClioteSky.getInstance().sendAsync(ClioteSky.stringToBytes(event.getPlayer().getName() + " <" + event.getPlayer().getDisplayNameString() + "> " + event.getComponent().getUnformattedText()), "chat", "Bungee");
+        ClioteSky.getInstance().sendAsync(ClioteSky.stringToBytes(event.getPlayer().getName() + " " + event.getComponent().getUnformattedText()), "chat", "Bungee");
         estiChatLastSent = event.getComponent().getUnformattedText();
     }
 
