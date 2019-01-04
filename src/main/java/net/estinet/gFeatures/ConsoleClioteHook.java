@@ -19,7 +19,14 @@ public class ConsoleClioteHook extends ClioteHook {
         assert args != null;
         String server = args.get(0);
         args.remove(0);
+        if (args.size() == 0) return;
         if (server.equals(ClioteSky.name)) return;
+
+        if (args.get(0).equals("[Join]")) {
+            args.set(0, "§6[§3Join§6]§r");
+        } else if (args.get(0).equals("[Leave]")) {
+            args.set(0, "§6[§3Leave§6]§r");
+        }
 
         StringBuilder msg = new StringBuilder();
         for (String arg : args) msg.append(arg).append(" ");

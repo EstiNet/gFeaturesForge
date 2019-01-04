@@ -10,6 +10,7 @@ import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartedEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
@@ -63,20 +64,24 @@ public class gFeatures {
         logger.info("Connecting to ClioteSky...");
         ClioteSky.initClioteSky();
         MinecraftForge.EVENT_BUS.register(new gFeatures());
-        updatePlayerList();
         logger.info("Started gFeatures.");
     }
 
     @Mod.EventHandler
-    public static void init(FMLServerStartingEvent event) {
-        event.registerServerCommand(new ListCommand());
-        event.registerServerCommand(new HubCommand());
+    public static void starting(FMLServerStartingEvent event) {
+        // TODO permissions event.registerServerCommand(new ListCommand());
+        // TODO event.registerServerCommand(new HubCommand());
+    }
+
+    @Mod.EventHandler
+    public static void started(FMLServerStartedEvent event) {
+        updatePlayerList();
     }
 
     // EstiChat port
     @SubscribeEvent
     public void chat(ServerChatEvent event) {
-        ClioteSky.getInstance().sendAsync(ClioteSky.stringToBytes(event.getPlayer().getName() + " <" + event.getPlayer().getDisplayName() + "> " + event.getComponent().getUnformattedText()), "chat", "Bungee");
+        ClioteSky.getInstance().sendAsync(ClioteSky.stringToBytes(event.getPlayer().getName() + " <" + event.getPlayer().getDisplayNameString() + "> " + event.getComponent().getUnformattedText()), "chat", "Bungee");
         estiChatLastSent = event.getComponent().getUnformattedText();
     }
 
@@ -89,14 +94,23 @@ public class gFeatures {
     @SubscribeEvent
     public void leave(PlayerEvent.PlayerLoggedOutEvent event) {
         ClioteSky.getInstance().sendAsync(ClioteSky.stringToBytes(event.player.getName() + " §6[§3Leave§6] §r" + event.player.getDisplayNameString()), "chat", "Bungee");
-        updatePlayerList();
+        updatePlayerList(event.player.getName());
     }
 
-    public static void updatePlayerList() {
+    public static void updatePlayerList(String... omit) {
         StringBuilder cliMsg = new StringBuilder();
         for (EntityPlayer p : FMLCommonHandler.instance().getMinecraftServerInstance().getPlayerList().getPlayers()) {
+            boolean skip = false;
+            for (String o : omit) {
+                if (o.equals(p.getName())) {
+                    skip = true;
+                    break;
+                }
+            }
+            if (skip) continue;
             cliMsg.append(p.getName()).append("§");
         }
+        if (cliMsg.length() == 0) cliMsg.append("d"); // fix for substring crash on empty
         ClioteSky.getInstance().sendAsync(ClioteSky.stringToBytes("update " + cliMsg.substring(0, cliMsg.length() - 1)), "fakeplayer", "Bungee"); // update player list
     }
 }

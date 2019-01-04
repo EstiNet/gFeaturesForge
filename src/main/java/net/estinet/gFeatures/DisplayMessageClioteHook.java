@@ -16,6 +16,8 @@ public class DisplayMessageClioteHook extends ClioteHook {
     public void run(byte[] data, String sender) {
         String disp = new String(data, StandardCharsets.UTF_8);
 
+        gFeatures.getLogger().info(disp);
+
         for (EntityPlayer p : FMLCommonHandler.instance().getMinecraftServerInstance().getPlayerList().getPlayers()) {
             p.sendMessage(new TextComponentString(disp));
         }
