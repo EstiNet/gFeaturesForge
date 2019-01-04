@@ -42,9 +42,24 @@ minecraft {
 }
 
 dependencies {
-    compile 'io.grpc:grpc-netty-shaded:1.17.1'
-    compile 'io.grpc:grpc-protobuf:1.17.1'
-    compile 'io.grpc:grpc-stub:1.17.1'
+    compile ('io.grpc:grpc-netty-shaded:1.17.1') {
+        exclude module: 'launchwrapper'
+        exclude module: 'guava'
+        exclude module: 'gson'
+        exclude module: 'commons-io'
+    }
+    compile ('io.grpc:grpc-protobuf:1.17.1'){
+        exclude module: 'launchwrapper'
+        exclude module: 'guava'
+        exclude module: 'gson'
+        exclude module: 'commons-io'
+    }
+    compile ('io.grpc:grpc-stub:1.17.1'){
+        exclude module: 'launchwrapper'
+        exclude module: 'guava'
+        exclude module: 'gson'
+        exclude module: 'commons-io'
+    }
 }
 
 processResources {
