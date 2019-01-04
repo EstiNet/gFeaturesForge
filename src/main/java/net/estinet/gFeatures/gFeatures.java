@@ -38,8 +38,8 @@ public class gFeatures {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        logger.info("Initializing gFeatures " + VERSION + "...");
         logger = event.getModLog();
+        logger.info("Initializing gFeatures " + VERSION + "...");
 
         ClioteSky.addHook(new ConsoleClioteHook("consolechat"));
         logger.info("Initialized gFeatures.");

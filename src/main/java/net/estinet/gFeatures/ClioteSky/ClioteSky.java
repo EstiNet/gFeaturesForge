@@ -49,15 +49,7 @@ public class ClioteSky {
     }
 
     private static void loadConfig() {
-        Properties prop = new Properties();
-        InputStream input = null;
-
         try {
-
-            input = new FileInputStream("config/gFeatures.yml");
-
-            // load a properties file
-            prop.load(input);
 
             // get the property value and print it out
             ClioteSky.name = gFeatures.gFeaturesConfig.clioteSkyName;
@@ -66,24 +58,15 @@ public class ClioteSky {
             ClioteSky.port = gFeatures.gFeaturesConfig.clioteSkyPort;
             ClioteSky.checkTLS = gFeatures.gFeaturesConfig.clioteSkyCheckTLS;
 
-            File f = new File("plugins/gFeatures/masterkey.key"); //get master key password
+            File f = new File("masterkey.key"); //get master key password
             if (f.exists()) {
                 ClioteSky.password = new String(Files.readAllBytes(f.toPath()));
             } else {
-                gFeatures.getLogger().info("No masterkey.key file found! Please add the key file.");
+                gFeatures.getLogger().error("No masterkey.key file found! Please add the key file.");
                 f.createNewFile();
             }
-
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        } finally {
-            if (input != null) {
-                try {
-                    input.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
