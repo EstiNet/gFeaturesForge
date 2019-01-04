@@ -30,7 +30,7 @@ public class ConsoleClioteHook extends ClioteHook {
                 args.set(0, "§6[§3Leave§6]§r");
                 break;
             case "[Switch]":
-                args.set(0, "§6[§Switch§6]§r");
+                args.set(0, "§6[§3Switch§6]§r");
                 break;
         }
 

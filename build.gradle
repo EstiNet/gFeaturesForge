@@ -11,6 +11,12 @@ buildscript {
         classpath 'io.grpc:grpc-netty-shaded:1.17.1'
         classpath 'io.grpc:grpc-protobuf:1.17.1'
         classpath 'io.grpc:grpc-stub:1.17.1'
+
+        // https://mvnrepository.com/artifact/io.netty/netty-all
+        classpath group: 'io.netty', name: 'netty-all', version: '4.1.32.Final'
+        // https://mvnrepository.com/artifact/io.netty/netty-tcnative
+        classpath group: 'io.netty', name: 'netty-tcnative', version: '2.0.20.Final'
+
         classpath "com.github.jengelman.gradle.plugins:shadow:1.2.3"
     }
 }
@@ -36,25 +42,39 @@ compileJava {
 }
 
 minecraft {
+    //version = "${mc_version}-${forge_version}"
     version = "1.12.2-14.23.5.2768"
     runDir = "run"
-    mappings = "snapshot_20171003"
+    mappings = "snapshot_20180304"
+    makeObfSourceJar = false
 }
 
 dependencies {
-    compile ('io.grpc:grpc-netty-shaded:1.17.1') {
+    compile('io.grpc:grpc-netty-shaded:1.17.1') {
         exclude module: 'launchwrapper'
         exclude module: 'guava'
         exclude module: 'gson'
         exclude module: 'commons-io'
     }
-    compile ('io.grpc:grpc-protobuf:1.17.1'){
+    compile('io.grpc:grpc-protobuf:1.17.1') {
         exclude module: 'launchwrapper'
         exclude module: 'guava'
         exclude module: 'gson'
         exclude module: 'commons-io'
     }
-    compile ('io.grpc:grpc-stub:1.17.1'){
+    compile('io.grpc:grpc-stub:1.17.1') {
+        exclude module: 'launchwrapper'
+        exclude module: 'guava'
+        exclude module: 'gson'
+        exclude module: 'commons-io'
+    }
+    compile(group: 'io.netty', name: 'netty-all', version: '4.1.32.Final') {
+        exclude module: 'launchwrapper'
+        exclude module: 'guava'
+        exclude module: 'gson'
+        exclude module: 'commons-io'
+    }
+    compile(group: 'io.netty', name: 'netty-tcnative', version: '2.0.20.Final') {
         exclude module: 'launchwrapper'
         exclude module: 'guava'
         exclude module: 'gson'
@@ -82,22 +102,14 @@ processResources {
 }
 
 shadowJar {
-    dependencies {
-        include(dependency('io.grpc:grpc-netty-shaded:1.17.1'))
-        include(dependency('io.grpc:grpc-protobuf:1.17.1'))
-        include(dependency('io.grpc:grpc-stub:1.17.1'))
-    }
+    relocate "io.grpc", "io.grpc"
+    relocate "io.netty", "io.netty"
 
+    baseName = 'gFeatures'
     exclude 'dummyThing'
     exclude 'LICENSE.txt'
-    classifier = 'full'
-}
-
-reobf {
-    shadowJar {
-        mappingType = 'SEARGE'
-        classpath = sourceSets.main.compileClasspath
-    }
+    classifier = null
+    version = null
 }
 
 jar {
@@ -107,5 +119,5 @@ jar {
         }
     }
 }
-
+reobf { shadowJar { mappingType = "SEARGE" } } // IMPORTANT LINE
 build.dependsOn(shadowJar)

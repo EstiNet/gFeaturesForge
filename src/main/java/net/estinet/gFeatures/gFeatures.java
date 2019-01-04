@@ -1,10 +1,14 @@
 package net.estinet.gFeatures;
 
+import com.mojang.authlib.GameProfile;
 import net.estinet.gFeatures.ClioteSky.ClioteSky;
 import net.minecraft.command.ICommandSender;
-import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.world.WorldServer;
+import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Config;
+import net.minecraftforge.common.util.FakePlayer;
 import net.minecraftforge.event.ServerChatEvent;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
@@ -14,10 +18,14 @@ import net.minecraftforge.fml.common.event.FMLServerStartedEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import org.apache.logging.log4j.Logger;
 
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Mod(modid = gFeatures.MODID, name = gFeatures.NAME, version = gFeatures.VERSION, serverSideOnly = true, acceptableRemoteVersions = "*")
 public class gFeatures {
@@ -75,7 +83,8 @@ public class gFeatures {
 
     @Mod.EventHandler
     public static void started(FMLServerStartedEvent event) {
-        updatePlayerList();
+
+        if (event.getSide().isServer()) updatePlayerList();
     }
 
     // EstiChat port
@@ -97,18 +106,20 @@ public class gFeatures {
         updatePlayerList(event.player.getName());
     }
 
+    @SideOnly(Side.SERVER)
     public static void updatePlayerList(String... omit) {
+        MinecraftServer server = FMLCommonHandler.instance().getMinecraftServerInstance();
         StringBuilder cliMsg = new StringBuilder();
-        for (EntityPlayer p : FMLCommonHandler.instance().getMinecraftServerInstance().getPlayerList().getPlayers()) {
+        for (String p : server.getOnlinePlayerNames()) {
             boolean skip = false;
             for (String o : omit) {
-                if (o.equals(p.getName())) {
+                if (o.equals(p)) {
                     skip = true;
                     break;
                 }
             }
             if (skip) continue;
-            cliMsg.append(p.getName()).append("§");
+            cliMsg.append(p).append("§");
         }
         if (cliMsg.length() == 0) cliMsg.append("d"); // fix for substring crash on empty
         ClioteSky.getInstance().sendAsync(ClioteSky.stringToBytes("update " + cliMsg.substring(0, cliMsg.length() - 1)), "fakeplayer", "Bungee"); // update player list
