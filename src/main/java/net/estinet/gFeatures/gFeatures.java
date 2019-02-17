@@ -1,14 +1,12 @@
 package net.estinet.gFeatures;
 
-import com.mojang.authlib.GameProfile;
 import net.estinet.gFeatures.ClioteSky.ClioteSky;
 import net.minecraft.command.ICommandSender;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.world.WorldServer;
-import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Config;
-import net.minecraftforge.common.util.FakePlayer;
 import net.minecraftforge.event.ServerChatEvent;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
@@ -22,10 +20,8 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import org.apache.logging.log4j.Logger;
 
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 @Mod(modid = gFeatures.MODID, name = gFeatures.NAME, version = gFeatures.VERSION, serverSideOnly = true, acceptableRemoteVersions = "*")
 public class gFeatures {
@@ -40,6 +36,9 @@ public class gFeatures {
         public static String clioteSkyAddress = "";
         public static String clioteSkyPort = "";
         public static boolean clioteSkyCheckTLS = false;
+        @Config.Comment("Other Config")
+        public static boolean isUsingProxy = true;
+        public static boolean rcOnJoin = false;
     }
 
     static final String MODID = "gfeatures";
@@ -58,10 +57,6 @@ public class gFeatures {
     public void preInit(FMLPreInitializationEvent event) {
         logger = event.getModLog();
         logger.info("Initializing gFeatures " + VERSION + "...");
-
-        ClioteSky.addHook(new ConsoleClioteHook("consolechat"));
-        ClioteSky.addHook(new DisplayMessageClioteHook("displaymessage"));
-        ClioteSky.addHook(new InfoPlayerListClioteHook("info playerlist"));
         logger.info("Initialized gFeatures.");
     }
 
@@ -70,6 +65,13 @@ public class gFeatures {
         // later
         logger.info("Starting gFeatures " + VERSION + "...");
         logger.info("Connecting to ClioteSky...");
+
+        if (!gFeaturesConfig.isUsingProxy) {
+            ClioteSky.addHook(new ConsoleClioteHook("consolechat"));
+            ClioteSky.addHook(new DisplayMessageClioteHook("displaymessage"));
+            ClioteSky.addHook(new InfoPlayerListClioteHook("info playerlist"));
+        }
+
         ClioteSky.initClioteSky();
         MinecraftForge.EVENT_BUS.register(new gFeatures());
         logger.info("Started gFeatures.");
@@ -83,7 +85,6 @@ public class gFeatures {
 
     @Mod.EventHandler
     public static void started(FMLServerStartedEvent event) {
-
         if (event.getSide().isServer()) updatePlayerList();
     }
 
@@ -97,13 +98,21 @@ public class gFeatures {
     @SubscribeEvent
     public void join(PlayerEvent.PlayerLoggedInEvent event) {
         ClioteSky.getInstance().sendAsync(ClioteSky.stringToBytes(event.player.getName() + " §6[§3Join§6] §r" + event.player.getDisplayNameString()), "chat", "Bungee");
-        updatePlayerList();
+        if (!gFeaturesConfig.isUsingProxy) updatePlayerList();
+        if (gFeaturesConfig.rcOnJoin) {
+            EntityPlayer p = event.player;
+            NBTTagCompound entityData = p.getEntityData();
+            if (!entityData.getBoolean("gFeatures.firstJoin")) {
+                entityData.setBoolean("gFeatures.firstJoin", true);
+                FMLCommonHandler.instance().getMinecraftServerInstance().getCommandManager().executeCommand(p, "rc");
+            }
+        }
     }
 
     @SubscribeEvent
     public void leave(PlayerEvent.PlayerLoggedOutEvent event) {
         ClioteSky.getInstance().sendAsync(ClioteSky.stringToBytes(event.player.getName() + " §6[§3Leave§6] §r" + event.player.getDisplayNameString()), "chat", "Bungee");
-        updatePlayerList(event.player.getName());
+        if (!gFeaturesConfig.isUsingProxy) updatePlayerList(event.player.getName());
     }
 
     @SideOnly(Side.SERVER)
