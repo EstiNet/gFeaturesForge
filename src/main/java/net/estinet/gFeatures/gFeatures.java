@@ -85,7 +85,7 @@ public class gFeatures {
 
     @Mod.EventHandler
     public static void started(FMLServerStartedEvent event) {
-        if (event.getSide().isServer()) updatePlayerList();
+        if (event.getSide().isServer() && !gFeaturesConfig.isUsingProxy) updatePlayerList();
     }
 
     // EstiChat port
