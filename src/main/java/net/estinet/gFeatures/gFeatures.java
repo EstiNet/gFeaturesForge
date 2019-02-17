@@ -104,7 +104,7 @@ public class gFeatures {
             NBTTagCompound entityData = p.getEntityData();
             if (!entityData.getBoolean("gFeatures.firstJoin")) {
                 entityData.setBoolean("gFeatures.firstJoin", true);
-                FMLCommonHandler.instance().getMinecraftServerInstance().getCommandManager().executeCommand(p, "rc");
+                FMLCommonHandler.instance().getMinecraftServerInstance().getCommandManager().executeCommand(p, "rtp");
             }
         }
     }
